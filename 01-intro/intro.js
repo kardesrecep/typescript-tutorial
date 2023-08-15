@@ -5,3 +5,4 @@ var user = {
     isAdmin: false
 };
 console.log(user.age);
+//let variableName: type=value

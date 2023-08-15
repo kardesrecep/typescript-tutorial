@@ -80,6 +80,7 @@ splitt("TypeScript");
  */
 
 //!Function overloading
+//?ex-1
 /* const add = (x:number,y:number):number => { 
 
     return x+y;
@@ -89,8 +90,8 @@ splitt("TypeScript");
 let val=add(6,5)
 console.log(val) */
 
-
-
+//?ex-2
+/* 
 function add(x: string, y: string):string;
 function add(x: number, y: number):number;
     
@@ -102,7 +103,26 @@ function add  (x:any,y:any):any {
  }
 
 let deger=add(7,9)
-console.log(deger)
+console.log(deger) */
+
+
+//!Rest Parameters
+//*rest parametreler bir fonksiyonun son argümanlarını temsil eder
+//*fonksiyondaki herhangi bir argümandan sonra gelen tüm 
+//*parametrelerin değerleri tek bir diziye toplar ve
+//*toplamı döndürür
+//?javadaki varargs gibi calisir kendinden sonra deger gelmez en sonda bulunur
+//?kendinden once deger gelebilir
+
+function total(...numbers:number[]) {
+    let total=0
+    numbers.forEach((num)=>total+=num)
+    return total;
+    
+}
+
+let val=total(1,2,3,7)
+console.log(val)
 
 
 
