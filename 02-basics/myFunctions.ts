@@ -113,23 +113,29 @@ console.log(deger) */
 //*toplamı döndürür
 //?javadaki varargs gibi calisir kendinden sonra deger gelmez en sonda bulunur
 //?kendinden once deger gelebilir
-
-function total(...numbers:number[]) {
+/* 
+function total(a:string,...numbers:number[]) {
+    console.log(a)
     let total=0
     numbers.forEach((num)=>total+=num)
     return total;
     
 }
 
-let val=total(1,2,3,7)
-console.log(val)
+let val=total("ALi",1,2,3,7)
+console.log(val) */
+
+function birlestir(message:string,...names:string[]):string {
+
+    return message+" "+names.join(" , ")
+}
+let val2=(birlestir("Hi","Ali","Osman","Tuba","Demet"))
+console.log(val2)
+
 
 
 
 /* 
-
-
-
 
 
 function signUpUser(name:string,email:string,isLogin:boolean) {
